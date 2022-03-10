@@ -82,4 +82,4 @@ st.markdown(" [Moro et al., 2011] *S. Moro, R. Laureano and P. Cortez. Using Dat
 
 
 st.markdown('## 2) Exploration des données')
-st.markdown("--- "
+st.markdown("--- ")
