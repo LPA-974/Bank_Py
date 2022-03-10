@@ -54,7 +54,7 @@ st.subheader('Datascientest : Formation Continue Datascientist Octobre 2021')
 
 st.markdown("--- ")
 
-st.markdown("*   Ndeye-Yacine FALL
+st.markdown("*   Ndeye-Yacine FALL")
 st.markdown("*   Louis PAVIE")
 st.markdown("*   Karima TOUMI")
 
