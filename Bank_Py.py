@@ -87,10 +87,8 @@ plt.title("Distribution de la variable 'Duration'")
 st.pyplot(fig)
 
 
-cor = df.corr()
+
 
 fig, ax = plt.subplots(figsize=(15,15))
-sns.heatmap(cor, annot=True, ax=ax, cmap='coolwarm')
-plt.title('Matrice de Corrélation des variables quantitatives'
-          
+sns.heatmap(df.corr(), ax=ax)       
 st.write(fig)
