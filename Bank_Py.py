@@ -64,7 +64,7 @@ st.markdown("* Sur la période d'observation, les indicateurs économiques sont 
 import matplotlib.pyplot as plt
 
 st.markdown("#### Visualisation de la variable 'Age'")
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(15,15))
 
 ax.hist(df['age'], rwidth=0.9, bins=15)
 plt.xlabel('Ages')
@@ -74,7 +74,7 @@ plt.title("Distribution de la variable 'Age'")
 st.pyplot(fig)
 
 st.markdown("#### Visualisation de la variable 'Duration'")
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(15,20))
 
 ax.hist(df['duration'], rwidth=0.9, bins=20)
 plt.xlabel('Durée en secondes du dernier contact')
