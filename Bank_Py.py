@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
 import streamlit as st
 
 st.title ("Projet Bank_Py")
@@ -79,8 +80,17 @@ st.markdown("#### Visualisation de la variable 'Duration'")
 fig, ax = plt.subplots(figsize=(20,15))
 
 ax.hist(df['duration'], rwidth=0.9, bins=60)
-plt.xlabel('Durée en minutess du dernier contact')
+plt.xlabel('Durée en minutes du dernier contact')
 plt.ylabel("Fréquence")
 plt.xticks([0,1,3,6,12,20,24,30,40,60])
 plt.title("Distribution de la variable 'Duration'")
+st.pyplot(fig)
+
+
+cor = df.corr()
+
+fig, ax = plt.subplots(figsize=(15,15))
+sns.heatmap(cor, annot=True, ax=ax, cmap='coolwarm')
+plt.title('Matrice de Corrélation des variables quantitatives'
+          
 st.pyplot(fig)
