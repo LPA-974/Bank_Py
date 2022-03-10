@@ -1,49 +1,3 @@
-# #  Projet Bank_Py
-# ---
-# 
-# Datascientest : Formation Continue Datascientist Octobre 2021
-# 
-# *   Ndeye-Yacine FALL
-# *   Louis PAVIE
-# *   Karima TOUMI
-# 
-# 
-
-# ## 1) Contexte
-# 
-# 
-# ---
-# 
-# 
-
-# L'objectif de ce projet *fil rouge* consiste à prédire le succès d'une campagne de Marketing bancaire visant à la souscription d'un contrat à terme.
-# 
-# Le support de ce projet est un *dataset* contenant les données d'une campagne de télémarketing réalisée auprès de ses clients par une banque Portugaise entre Mai 2008 et Novembre 2010.
-# Il existe plusieurs versions disponibles de ce dataset, de tailles et de compositions différentes. Parmi les 6 versions trouvées, nous avons préselectionnées les 2 versions contenant le plus de lignes (> 40 000 lignes), et finalement choisi la version avec données économiques (21 colonnes) qui nous paraissait plus intéressante que la version purement données bancaires (17 colonnes).
-# 
-# Pour mener à bien ce projet, notre démarche s'articulera en trois temps: 
-# * Nous effectuerons d'abord une analyse visuelle et statistique des données clients et du lien avec la variable cible (Y) souscription au dépôt à terme.
-# 
-# * Dans un deuxième temps, nous utiliserons les techniques du *Machine Learning* pour essayer de déterminer à l'avance si un client va souscrire ou non au dépot à terme proposé.
-# 
-# * Enfin à l'aide des techniques d'interprétabilité des modèles, nous tenterons d'expliquer à l'échelle d'un individu pourquoi il est plus susceptible de souscrire ou non.
-# 
-# **Références** : Données publiques utilisables dans le cadre de la recherche et l'éducation.
-# 
-# [Moro et al., 2011] *S. Moro, R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing.*
-
-# ## 2) Configuration
-# 
-# 
-# ---
-# 
-# 
-
-# Cette étape recouvre les importations de bibliothèques nécessaires au bon fonctionnement du notebook
-
-# In[1]:
-
-
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -109,7 +63,7 @@ st.markdown("* Sur la période d'observation, les indicateurs économiques sont 
 
 import matplotlib.pyplot as plt
 
-st.markdown("Distribution de la variable 'Age'")
+st.markdown("#### Visualisation de la variable 'Age'")
 fig, ax = plt.subplots()
 
 ax.hist(df['age'], rwidth=0.9, bins=15)
@@ -117,4 +71,14 @@ plt.xlabel('Ages')
 plt.ylabel("Fréquence")
 plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
 plt.title("Distribution de la variable 'Age'")
+st.pyplot(fig)
+
+st.markdown("#### Visualisation de la variable 'Duration'")
+fig, ax = plt.subplots()
+
+ax.hist(df['duration'], rwidth=0.9, bins=15)
+plt.xlabel('Durée en secondes du dernier contact')
+plt.ylabel("Fréquence")
+plt.xticks([0,60,180,360,720,1200,1440,1800,2400,3600])
+plt.title("Distribution de la variable 'Duration'")
 st.pyplot(fig)
