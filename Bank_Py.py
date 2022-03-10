@@ -109,3 +109,9 @@ st.markdown("* Sur la période d'observation, les indicateurs économiques sont 
 
 st.markdown("Distribution de la variable 'Age'")
 st.bar_chart(df['age'])
+
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.hist(df['age'], bins=20)
+st.pyplot(fig)
