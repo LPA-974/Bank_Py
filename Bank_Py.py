@@ -93,4 +93,4 @@ fig, ax = plt.subplots(figsize=(15,15))
 sns.heatmap(cor, annot=True, ax=ax, cmap='coolwarm')
 plt.title('Matrice de Corrélation des variables quantitatives'
           
-st.pyplot(fig)
+st.write(fig)
