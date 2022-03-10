@@ -112,5 +112,5 @@ import matplotlib.pyplot as plt
 st.markdown("Distribution de la variable 'Age'")
 fig, ax = plt.subplots()
 
-ax.hist(df['age'], bins=20, rwidth=0.9)
+ax.hist(df['age'], bins=20, hue= df['y'], rwidth=0.9)
 st.pyplot(fig)
