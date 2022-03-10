@@ -49,15 +49,17 @@ import numpy as np
 import streamlit as st
 
 st.title ("Projet Bank_Py")
+st.markdown("--- ")
 st.subheader('Datascientest : Formation Continue Datascientist Octobre 2021')
 
 st.markdown("--- ")
 
-st.markdown("*   Ndeye-Yacine FALL")
+st.markdown("*   Ndeye-Yacine FALL
 st.markdown("*   Louis PAVIE")
 st.markdown("*   Karima TOUMI")
 
-
+st.markdown('## 1) Contexte')
+st.markdown("--- ")
 # In[2]:
 
 
