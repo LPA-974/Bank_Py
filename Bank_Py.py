@@ -113,5 +113,8 @@ st.bar_chart(df['age'])
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
+plt.xlabel('Ages')
+plt.ylabel("Fréquence")
+plt.title("Distribution de la variable 'Age', en fonction du résultat (Y/N) de souscription")
 ax.hist(df['age'], bins=20)
 st.pyplot(fig)
