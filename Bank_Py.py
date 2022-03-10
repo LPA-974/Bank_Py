@@ -74,9 +74,9 @@ plt.title("Distribution de la variable 'Age'")
 st.pyplot(fig)
 
 st.markdown("#### Visualisation de la variable 'Duration'")
-fig, ax = plt.subplots(figsize=(15,20))
+fig, ax = plt.subplots(figsize=(20,15))
 
-ax.hist(df['duration'], rwidth=0.9, bins=20)
+ax.hist(df['duration'], rwidth=0.9, bins=30)
 plt.xlabel('Durée en secondes du dernier contact')
 plt.ylabel("Fréquence")
 plt.xticks([0,60,180,360,720,1200,1440,1800,2400,3600])
