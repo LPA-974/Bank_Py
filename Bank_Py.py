@@ -83,3 +83,26 @@ st.markdown(" [Moro et al., 2011] *S. Moro, R. Laureano and P. Cortez. Using Dat
 
 st.markdown('## 2) Exploration des données')
 st.markdown("--- ")
+
+df=pd.read_csv("bank-additional-full.csv",sep=";")
+
+df = df.drop_duplicates(keep = 'first')
+
+df['Y_num'] = df['y']
+df['Y_num'].replace({'no': 0}, inplace=True)
+df['Y_num'].replace({'yes': 1}, inplace=True)
+
+df['pdays'].value_counts()
+df['pdays'].replace({999: -1}, inplace=True)
+
+st.write(df.describe().transpose().round())
+
+st.markdown("* L'age moyen du portefeuille est de 40 ans.")
+st.markdown("* 50% du portefeuille a un age compris entre 32 ans et 47 ans.")
+st.mardown("* La durée du contact est en moyenne de 4 minutes et 18 secondes.")
+st.mardown("* Pour la campagne en cours, chaque client a été contacté en moyenne entre 2 et 3 fois.")
+st.mardown("* 50% des clients ont été contactés entre 1 ou 3 fois.")
+st.mardown("* Le nombre de contact maximum qui est de 56 nous semble aberrant.")
+st.mardown("* Vu les statistiques, la variable pdays ne semble pas exploitable, nous pourrons la retirer par la suite.")
+st.mardown("* La majorité des clients est contacté pour la première fois lors de cette campagne.")
+st.mardown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
