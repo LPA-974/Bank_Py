@@ -49,6 +49,8 @@ df['Y_num'].replace({'yes': 1}, inplace=True)
 df['pdays'].value_counts()
 df['pdays'].replace({999: -1}, inplace=True)
 
+df['duration'] = df['duration'] / 60
+
 st.write(df.describe().transpose().round())
 
 st.markdown("* L'age moyen du portefeuille est de 40 ans.")
@@ -77,8 +79,8 @@ st.markdown("#### Visualisation de la variable 'Duration'")
 fig, ax = plt.subplots(figsize=(20,15))
 
 ax.hist(df['duration'], rwidth=0.9, bins=60)
-plt.xlabel('Durée en secondes du dernier contact')
+plt.xlabel('Durée en minutess du dernier contact')
 plt.ylabel("Fréquence")
-plt.xticks([0,60,180,360,720,1200,1440,1800,2400,3600])
+plt.xticks([0,1,3,6,12,20,24,30,40,60])
 plt.title("Distribution de la variable 'Duration'")
 st.pyplot(fig)
