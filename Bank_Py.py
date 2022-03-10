@@ -106,3 +106,6 @@ st.markdown("* Le nombre de contact maximum qui est de 56 nous semble aberrant."
 st.markdown("* Vu les statistiques, la variable pdays ne semble pas exploitable, nous pourrons la retirer par la suite.")
 st.markdown("* La majorité des clients est contacté pour la première fois lors de cette campagne.")
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
+
+st.markdown('Distribution de la variable 'Age'')
+st.bar_chart(df['age'])
