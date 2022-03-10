@@ -113,4 +113,5 @@ st.markdown("Distribution de la variable 'Age'")
 fig, ax = plt.subplots()
 
 ax.hist(df['age'], rwidth=0.9, bins=15)
+plt.xlabel('Ages')
 st.pyplot(fig)
