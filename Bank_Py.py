@@ -114,4 +114,6 @@ fig, ax = plt.subplots()
 
 ax.hist(df['age'], rwidth=0.9, bins=15)
 plt.xlabel('Ages')
+plt.ylabel("Fréquence")
+plt.title("Distribution de la variable 'Age'")
 st.pyplot(fig)
