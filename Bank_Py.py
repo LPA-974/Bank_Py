@@ -95,7 +95,7 @@ st.pyplot(fig)
 
 
 fig, ax = plt.subplots(figsize=(15,15))
-sns.heatmap(df.corr(), ax=ax)       
+sns.heatmap(df.corr(), ax=ax, cmap='coolwarm')       
 st.pyplot(fig)
 
 sns_dis_age = plt.figure()
