@@ -96,7 +96,7 @@ st.pyplot(fig)
 
 fig, ax = plt.subplots(figsize=(15,15))
 sns.heatmap(df.corr(), ax=ax)       
-st.write(fig)
+st.pyplot(fig)
 
 sns_dis_age = plt.figure()
 sns.displot(data=df, x="age", hue="y", kde= True, height=15)
