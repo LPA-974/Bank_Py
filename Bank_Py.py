@@ -98,9 +98,10 @@ fig, ax = plt.subplots(figsize=(15,15))
 sns.heatmap(df.corr(), ax=ax, cmap='coolwarm', annot=True)       
 st.pyplot(fig)
 
-sns_dis_age = plt.figure()
-sns.displot(data=df, x="age", hue="y", kde= True, height=15)
+
+fig, ax = plt.subplots(figsize=(15,15))
+sns.displot(data=df, x="age", hue="y", kde= True)
 plt.xlabel('Ages')
 plt.ylabel("Fréquence")
 plt.title("Distribution de la variable 'Age', en fonction du résultat (Y/N) de souscription")
-st.write(sns_dis_age)
+st.pyplot(fig)
