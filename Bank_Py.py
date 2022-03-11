@@ -100,5 +100,5 @@ st.pyplot(fig)
 
 
 fig, ax = plt.subplots(figsize=(15,15))
-sns.displot(data=df, x="age", hue="y", kde= True)
+sns.displot(df['age'], hue=df['y'], kde= True)
 st.pyplot(fig)
