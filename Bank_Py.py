@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
+
 import streamlit as st
 
 st.title ("Projet Bank_Py")
@@ -43,6 +43,10 @@ df=pd.read_csv("bank-additional-full.csv",sep=";")
 
 df = df.drop_duplicates(keep = 'first')
 
+st.dataframe(df.head())
+
+st.dataframe(df.info())
+
 df['Y_num'] = df['y']
 df['Y_num'].replace({'no': 0}, inplace=True)
 df['Y_num'].replace({'yes': 1}, inplace=True)
@@ -65,6 +69,7 @@ st.markdown("* La majorité des clients est contacté pour la première fois lor
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
 
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 st.markdown("#### Visualisation de la variable 'Age'")
 fig, ax = plt.subplots(figsize=(15,15))
@@ -92,3 +97,10 @@ st.pyplot(fig)
 fig, ax = plt.subplots(figsize=(15,15))
 sns.heatmap(df.corr(), ax=ax)       
 st.write(fig)
+
+sns_dis_age = plt.figure()
+sns.displot(data=df, x="age", hue="y", kde= True, height=15)
+plt.xlabel('Ages')
+plt.ylabel("Fréquence")
+plt.title("Distribution de la variable 'Age', en fonction du résultat (Y/N) de souscription")
+st.pyplot(sns_dis_age)
