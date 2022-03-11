@@ -99,6 +99,6 @@ sns.heatmap(df.corr(), ax=ax, cmap='coolwarm', annot=True)
 st.pyplot(fig)
 
 
-fig, ax = plt.subplots(figsize=(15,15))
-sns.displot(df['age'], hue=df['y'], kde= True)
+fig = plt.subplots(figsize=(15,15))
+sns.displot(df['age'], kde= True)
 st.pyplot(fig)
