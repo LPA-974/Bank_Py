@@ -101,7 +101,4 @@ st.pyplot(fig)
 
 fig, ax = plt.subplots(figsize=(15,15))
 sns.displot(data=df, x="age", hue="y", kde= True)
-plt.xlabel('Ages')
-plt.ylabel("Fréquence")
-plt.title("Distribution de la variable 'Age', en fonction du résultat (Y/N) de souscription")
 st.pyplot(fig)
