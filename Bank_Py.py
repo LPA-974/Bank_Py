@@ -45,7 +45,7 @@ df = df.drop_duplicates(keep = 'first')
 
 st.dataframe(df.head())
 
-st.write(df.info())
+#st.write(df.info())
 
 df['Y_num'] = df['y']
 df['Y_num'].replace({'no': 0}, inplace=True)
@@ -103,4 +103,4 @@ sns.displot(data=df, x="age", hue="y", kde= True, height=15)
 plt.xlabel('Ages')
 plt.ylabel("Fréquence")
 plt.title("Distribution de la variable 'Age', en fonction du résultat (Y/N) de souscription")
-st.pyplot(sns_dis_age)
+st.write(sns_dis_age)
