@@ -45,7 +45,7 @@ df = df.drop_duplicates(keep = 'first')
 
 st.dataframe(df.head())
 
-st.dataframe(df.info())
+st.write(df.info())
 
 df['Y_num'] = df['y']
 df['Y_num'].replace({'no': 0}, inplace=True)
