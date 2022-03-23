@@ -58,7 +58,7 @@ df['duration'] = df['duration'] / 60
 
 st.write(df.describe().transpose().round())
 
-st.markdown("* L'age moyen du portefeuille est de 40 ans.")
+st.markdown("* L'age moyen du portefeuille est de 40 ans")
 st.markdown("* 50% du portefeuille a un age compris entre 32 ans et 47 ans.")
 st.markdown("* La durée du contact est en moyenne de 4 minutes et 18 secondes.")
 st.markdown("* Pour la campagne en cours, chaque client a été contacté en moyenne entre 2 et 3 fois.")
@@ -80,6 +80,7 @@ plt.ylabel("Fréquence")
 plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
 plt.title("Distribution de la variable 'Age'")
 st.pyplot(fig)
+st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
 st.markdown("#### Visualisation de la variable 'Duration'")
 fig, ax = plt.subplots(figsize=(20,15))
@@ -90,14 +91,21 @@ plt.ylabel("Fréquence")
 plt.xticks([0,1,3,6,12,20,24,30,40,60])
 plt.title("Distribution de la variable 'Duration'")
 st.pyplot(fig)
-
-
+st.markdown("Nous pouvons constater que : ")
+st.markdown("* la majorité des appels durent entre 1 et 6 minutes")
+st.markdown("* les appels de moins de 1 minutes sont improductifs")
+st.markdown("* les appels entre 3 et 12 minutes sont souvent productifs")
+st.markdown("* les appels entre 12 et 24 minutes, sont très productifs, mais peu nombreux.")
 
 
 fig, ax = plt.subplots(figsize=(15,15))
 sns.heatmap(df.corr(), ax=ax, cmap='coolwarm', annot=True)       
 st.pyplot(fig)
-
+st.markdown("La matrice de corrélation entre les variables quantitatives permet de constater de manière générale des corrélations assez faibles entre les variables.")
+st.markdown("Toutefois nous pouvons constater des corrélations assez fortes pour les variables économiques entre elles, ce qui est logique.")
+st.markdown("En ce qui concerne la corrélation avec la variable cible, c'est la durée de l'appel qui obtient le coefficient de corrélation le plus important (0,41).")
+st.markdown("Suivi par le nombre de jours depuis le dernier contact (0,28) et le nombre de contact (0,23).")
+st.markdown("Les coefficients de corrélations négatif entre la variable cible et les variables économiques s'expliquent par l'aspect 'refuge' du dépôt à terme.")
 
 #fig = plt.subplots(figsize=(15,15))
 #sns.displot(df['age'], kde= True)
