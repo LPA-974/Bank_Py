@@ -82,7 +82,7 @@ if st.checkbox("Voulez-vous afficher la visualisation de la variable Age ?"):
     plt.title("Distribution de la variable 'Age'")
     st.pyplot(fig)
     
-st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est majoritairement 'jeune' et d'age inférieur à 60 ans.")
+    st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
 st.markdown("#### Visualisation de la variable 'Duration'")
 fig, ax = plt.subplots(figsize=(20,15))
