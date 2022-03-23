@@ -72,14 +72,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.markdown("#### Visualisation de la variable 'Age'")
-fig, ax = plt.subplots(figsize=(15,15))
 
-ax.hist(df['age'], rwidth=0.9, bins=15)
-plt.xlabel('Ages')
-plt.ylabel("Fréquence")
-plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
-plt.title("Distribution de la variable 'Age'")
-st.pyplot(fig)
+if st.checkbox("Voulez-vous afficher la visualisation de la variable Age ?"):
+    fig, ax = plt.subplots(figsize=(15,15))
+    ax.hist(df['age'], rwidth=0.9, bins=15)
+    plt.xlabel('Ages')
+    plt.ylabel("Fréquence")
+    plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
+    plt.title("Distribution de la variable 'Age'")
+    st.pyplot(fig)
+    
 st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
 st.markdown("#### Visualisation de la variable 'Duration'")
