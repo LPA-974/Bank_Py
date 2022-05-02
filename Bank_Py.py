@@ -73,7 +73,7 @@ import seaborn as sns
 
 st.markdown("#### Visualisation de la variable 'Age'")
 
-if st.checkbox("Voulez-vous afficher la visualisation de la variable Age ?"):
+if st.checkbox("--> Afficher la visualisation de la variable Age"):
     fig, ax = plt.subplots(figsize=(15,15))
     ax.hist(df['age'], rwidth=0.9, bins=15)
     plt.xlabel('Ages')
@@ -85,7 +85,7 @@ if st.checkbox("Voulez-vous afficher la visualisation de la variable Age ?"):
     st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
 st.markdown("#### Visualisation de la variable 'Duration'")
-if st.checkbox("Voulez-vous afficher la visualisation de la variable Duration ?"):
+if st.checkbox("--> Afficher la visualisation de la variable Duration"):
     fig, ax = plt.subplots(figsize=(20,15))
 
     ax.hist(df['duration'], rwidth=0.9, bins=60)
