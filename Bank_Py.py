@@ -3,6 +3,11 @@ import numpy as np
 
 import streamlit as st
 
+st.set_page_config(
+    page_title="Rapport de Projet Bank_Py",
+    page_icon="*",
+    layout="wide",)
+
 st.title ("Projet Bank_Py")
 st.markdown("--- ")
 st.subheader('Datascientest : Formation Continue Datascientist Octobre 2021')
