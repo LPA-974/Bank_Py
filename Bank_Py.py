@@ -108,16 +108,16 @@ if st.checkbox("--> Afficher la visualisation de la variable Duration"):
     st.markdown("* les appels entre 12 et 24 minutes, sont très productifs, mais peu nombreux.")
 
 
-st.markdown("/n")    
-st.markdown("#### Visualisation de la Heatmap")
-fig, ax = plt.subplots(figsize=(15,15))
-sns.heatmap(df.corr(), ax=ax, cmap='coolwarm', annot=True)       
-st.pyplot(fig)
-st.markdown("La matrice de corrélation entre les variables quantitatives permet de constater de manière générale des corrélations assez faibles entre les variables.")
-st.markdown("Toutefois nous pouvons constater des corrélations assez fortes pour les variables économiques entre elles, ce qui est logique.")
-st.markdown("En ce qui concerne la corrélation avec la variable cible, c'est la durée de l'appel qui obtient le coefficient de corrélation le plus important (0,41).")
-st.markdown("Suivi par le nombre de jours depuis le dernier contact (0,28) et le nombre de contact (0,23).")
-st.markdown("Les coefficients de corrélations négatif entre la variable cible et les variables économiques s'expliquent par l'aspect 'refuge' du dépôt à terme.")
+if st.checkbox("--> Afficher la visualisation de la Heatmap"):
+    st.markdown("#### Visualisation de la Heatmap")
+    fig, ax = plt.subplots(figsize=(15,15))
+    sns.heatmap(df.corr(), ax=ax, cmap='coolwarm', annot=True)       
+    st.pyplot(fig)
+    st.markdown("La matrice de corrélation entre les variables quantitatives permet de constater de manière générale des corrélations assez     faibles entre les variables.")
+    st.markdown("Toutefois nous pouvons constater des corrélations assez fortes pour les variables économiques entre elles, ce qui est         logique.")
+    st.markdown("En ce qui concerne la corrélation avec la variable cible, c'est la durée de l'appel qui obtient le coefficient de             corrélation le plus important (0,41).")
+    st.markdown("Suivi par le nombre de jours depuis le dernier contact (0,28) et le nombre de contact (0,23).")
+    st.markdown("Les coefficients de corrélations négatif entre la variable cible et les variables économiques s'expliquent par l'aspect       'refuge' du dépôt à terme.")
 
 #fig = plt.subplots(figsize=(15,15))
 #sns.displot(df['age'], kde= True)
