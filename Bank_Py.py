@@ -77,7 +77,6 @@ st.markdown("* La majorité des clients est contacté pour la première fois lor
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
 
 
-st.write('Count = ', count)
 
 if st.checkbox("--> Afficher la visualisation de la variable Age"):
     st.markdown("#### Visualisation de la variable 'Age'")
@@ -90,7 +89,7 @@ if st.checkbox("--> Afficher la visualisation de la variable Age"):
     plt.title("Distribution de la variable 'Age'")
     st.pyplot(fig)
     
-    st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est majoritairement 'jeune' et d'age inférieur à 60 ans.")
+    st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est                   majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
 
 if st.checkbox("--> Afficher la visualisation de la variable Duration"):
