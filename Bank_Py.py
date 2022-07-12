@@ -172,3 +172,79 @@ if st.checkbox("--> Afficher la visualisation de la variable Previous"):
 
     st.markdown("La trés grande majorité des personnes n'ont pas été contactées avant la campagne en cours (previous = 0). Cependant, les personnes qui ont été recontactées sont susceptibles de souscrire même si cette tendance diminue après le troisiemme contact (effet de lassitude ?).")
     
+    
+if st.checkbox("--> Afficher la visualisation de la variable Job"):
+    st.markdown("#### Visualisation de la variable 'Job'")
+    st.image('./Var_Dist_Job.jpg')
+
+    st.markdown("Les employés de bureau, les ouvriers et les techniciens sont les plus représentés parmi les personnes contactées, et c'est parmi leurs rangs que l'on retrouve la plus forte proportion de ceux qui ont souscrit (employés de bureau 29%, techniciens 16% et ouvriers 14%).")
+
+    
+if st.checkbox("--> Afficher la visualisation de la variable Marital"):
+    st.markdown("#### Visualisation de la variable 'Marital'")
+    st.image('./Var_Dist_Marital.jpg')
+
+    st.markdown("Les personnes marriées sont les plus représentés parmi les personnes contactées, et c'est parmi leurs rangs que l'on retrouve la plus forte proportion de ceux qui ont souscrit (54,5%), suivi par les célibataires (35%).")
+
+if st.checkbox("--> Afficher la visualisation de la variable Education"):
+    st.markdown("#### Visualisation de la variable 'Education'")
+    st.image('./Var_Dist_Education.jpg')
+
+    st.markdown("Les personnes les plus représentés parmi les personnes contactées sont celles qui ont un diplome universitaire, suivi de celles qui suivi leur scolarité dans une 'grande école'. C'est parmi leurs rangs que l'on retrouve la plus forte proportion de ceux qui ont souscrit (36%) et (22%).")
+            
+        
+if st.checkbox("--> Afficher la visualisation de la variable Default"):
+    st.markdown("#### Visualisation de la variable 'Default'")
+    st.image('./Var_Dist_Default.jpg')
+
+    st.markdown("Sans surprise la trés grande majorité des personnes contactées n'ont pas connues de défaut de paiement. Et aucune des quelques personnes ayant un défaut de paiement n'a souscrit (clause exclusive ?).")        
+    
+    
+if st.checkbox("--> Afficher la visualisation de la variable Housing"):
+    st.markdown("#### Visualisation de la variable 'Housing'")
+    st.image('./Var_Dist_Housing.jpg')
+
+    st.markdown("Nous constatons une légère pré-éminence des détenteurs de prêt Habitat, tant en nombre de personnes qu'en proportion de ceux qui ont souscrits (54%).")          
+    
+
+if st.checkbox("--> Afficher la visualisation de la variable Loan"):
+    st.markdown("#### Visualisation de la variable 'Loan'")
+    st.image('./Var_Dist_Loan.jpg')
+
+    st.markdown("La très grande majorité des personnes contactées n'avaient pas souscrit de prêt personnel, et c'est parmi eux que se retrouvent l'écrasante majorité de ceux qui ont souscrits (83%). Cependant la répartition homogène no/yes entre les trois modalités indique que cette variable est sans impact sur le résultat.")          
+    
+
+if st.checkbox("--> Afficher la visualisation de la variable Contact"):
+    st.markdown("#### Visualisation de la variable 'Contact'")
+    st.image('./Var_Dist_Contact.jpg')
+
+    st.markdown("Une majorité des personnes contactées l'ont été via téléphone mobile, et c'est parmi eux que se retrouvent l'écrasante majorité de ceux qui ont souscrits (83%).")      
+    
+
+if st.checkbox("--> Afficher la visualisation de la variable POutcome"):
+    st.markdown("#### Visualisation de la variable 'POutcome'")
+    st.image('./Var_Dist_Poutcome.jpg')
+
+    st.markdown("La trés grande majorité des personnes contactées l'ont été pour la première fois (nonexistent), et c'est parmi eux que nous retrouvons la plus forte proportion de ceux qui ont souscrits (67%).")      
+    
+    
+if st.checkbox("--> Afficher la visualisation de la variable cible 'Y'"):
+    st.markdown("#### Visualisation de la variable cible 'Y'")
+    st.image('./Var_Dist_Y.jpg')
+
+    st.markdown("Le résultat de la campagne de télémarketing bancaire est plutôt bon avec 11% de souscription de dépôt à terme. Remarque, pour les étapes de modélisations à suivre nous devrons certainement retravailler la taille de l'échantillon (oversampling ?) pour ré-équilibrer les 2 modalités.")      
+    
+
+    
+if st.checkbox("--> Afficher la visualisation de la modalité et distribution de la variable duration selon le niveau d'études"):
+    st.markdown("#### Visualisation de la modalité et distribution de la variable duration selon le niveau d'études")
+    st.image('./Var_Dist_Duration_Edu.jpg')
+
+    st.markdown("Le graphique nous montre que la distribution de la durée du contact semble corrélée au niveau d'éducation du client.")
+
+    st.markdown("En faisant le test ANOVA, la p-value (6%) est supérieure de peu à la référence généralement admise (5%). Ce qui ne nous permettrait pas de rejeter l'hypothèse d'indépendance.")
+
+    st.markdown("Cependant dans le cas de marketing de masse, comme c'est le cas ici, il est d'usage d'augmenter ce seuil jusqu'à une valeur de 10%. En considérant ce nouveau seuil, nous pouvons donc rejeter l'hypothèse d'indépendance de ces deux variables. Nous affirmerons donc que le niveau d'études du prospect à un effet statistique significatif sur la durée de l'entretien.")
+
+    st.markdown("Il semble que plus le niveau d'éducation est élevé plus la durée du contact est élevé. Ceci peut s'expliquer par une capacité accrue à demander des détails techniques sur les conditions du dépôt à terme.")      
+    
