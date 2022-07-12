@@ -104,11 +104,15 @@ if st.checkbox("--> Afficher la visualisation de la variable Day_of_Weeks"):
     
     st.markdown("Nous constatons une répartition inégale des Mois, suite à un recouvrement, la campagne durant plus de un an. L'absence d'une variable date (avec l'année) rend difficile une analyse plus précise du phénomène sans retravailler les données pour reconstitution d'une série chronologique explicite.")
     
-if st.checkbox("--> Afficher la visualisation du Nombre d'entretien et du nombre de conversion au fil du temps"):
+if st.checkbox("--> Afficher la visualisation du Nombre d'entretien et de la conversion au fil du temps"):
     st.markdown("Nombre d'entretien et du nombre de conversion au fil du temps")
     st.image('./Var_Interview.jpg')
+
     
-    st.markdown("Nous constatons une répartition inégale des Mois, suite à un recouvrement, la campagne durant plus de un an. L'absence d'une variable date (avec l'année) rend difficile une analyse plus précise du phénomène sans retravailler les données pour reconstitution d'une série chronologique explicite.")
+    st.markdown("Taux de conversion au fil du temps")
+    st.image('./Var_Tx_Conv.jpg')
+
+    st.markdown("Nous pouvons constater un effet d'apprentissage certain au cours du temps. En effet le taux de conversion augmente significativement et en même temps le nombre d'appels diminue drastiquement.")
     
 
     
