@@ -79,6 +79,21 @@ st.markdown("* La majorité des clients est contacté pour la première fois lor
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
 
 
+if st.checkbox("--> Afficher la visualisation de la variable Months"):
+    st.markdown("#### Visualisation de la variable 'Month'")
+    st.markdown(" ")
+    fig, ax = plt.subplots(figsize=(15,15))
+    ax.hist(df['month'], rwidth=0.9, bins=15)
+    plt.xlabel('Month')
+    plt.ylabel("Fréquence")
+    plt.title("Distribution de la variable 'Monyh'")
+    st.pyplot(fig)
+    
+    st.markdown("Nous constatons une répartition inégale des Mois, suite à un recouvrement, la campagne durant plus de un an. L'absence d'une variable date (avec l'année) rend difficile une analyse plus précise du phénomène sans retravailler les données pour reconstitution d'une série chronologique explicite.")
+    
+
+
+
     
 if st.checkbox("--> Afficher la visualisation de la variable Age"):
     st.markdown("#### Visualisation de la variable 'Age'")
@@ -124,6 +139,3 @@ if st.checkbox("--> Afficher la visualisation de la Heatmap"):
     st.markdown("Suivi par le nombre de jours depuis le dernier contact (0,28) et le nombre de contact (0,23).")
     st.markdown("Les coefficients de corrélations négatif entre la variable cible et les variables économiques s'expliquent par l'aspect       'refuge' du dépôt à terme.")
 
-#fig = plt.subplots(figsize=(15,15))
-#sns.displot(df['age'], kde= True)
-#st.pyplot(fig)
