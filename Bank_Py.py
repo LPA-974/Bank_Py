@@ -12,8 +12,6 @@ st.set_page_config(
     page_icon="*",
     layout="wide",)
 
-st.image('./STR_Logos.jpg')
-
 st.title ("Projet Bank_Py")
 st.markdown("--- ")
 st.subheader('Datascientest : Formation Continue Datascientist Octobre 2021')
