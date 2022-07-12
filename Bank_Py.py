@@ -79,18 +79,18 @@ st.markdown("* Vu les statistiques, la variable pdays ne semble pas exploitable,
 st.markdown("* La majorité des clients est contacté pour la première fois lors de cette campagne.")
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
 
-if st.checkbox("--> Afficher les données Chronologiques"):
+
     
-    if st.checkbox("--> Afficher la visualisation de la variable 'Month'"):
-        st.markdown("#### Visualisation de la variable 'Month'")
-        st.markdown(" ")
-        fig, ax = plt.subplots(figsize=(15,15))
-        ax.hist(df['month'], rwidth=0.9, bins=15)
-        plt.xlabel('Mois de contact')
-        plt.ylabel("Nombre d'occurences")
-        #plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
-        plt.title("Variable 'Month', en fonction du résultat (Y/N) de souscription")
-        st.pyplot(fig)
+if st.checkbox("--> Afficher la visualisation de la variable 'Month'"):
+    st.markdown("#### Visualisation de la variable 'Month'")
+    st.markdown(" ")
+    fig, ax = plt.subplots(figsize=(15,15))
+    ax.hist(df['month'], rwidth=0.9, bins=15)
+    plt.xlabel('Mois de contact')
+    plt.ylabel("Nombre d'occurences")
+    #plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
+    plt.title("Variable 'Month', en fonction du résultat (Y/N) de souscription")
+    st.pyplot(fig)
     
     
     
