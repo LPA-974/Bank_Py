@@ -12,6 +12,9 @@ st.set_page_config(
     page_icon="*",
     layout="wide",)
 
+
+st.image('./STR_Logos.jpg')
+
 st.title ("Projet Bank_Py")
 st.markdown("--- ")
 st.subheader('Datascientest : Formation Continue Datascientist Octobre 2021')
@@ -79,23 +82,6 @@ st.markdown("* Sur la période d'observation, les indicateurs économiques sont 
 
 
     
-
-    
-if st.checkbox("--> Afficher la visualisation de la variable Age"):
-    st.markdown("#### Visualisation de la variable 'Age'")
-    st.markdown(" ")
-    fig, ax = plt.subplots(figsize=(15,15))
-    ax.hist(df['age'], rwidth=0.9, bins=15)
-    plt.xlabel('Ages')
-    plt.ylabel("Fréquence")
-    plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
-    plt.title("Distribution de la variable 'Age'")
-    st.pyplot(fig)
-    
-    st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est                   majoritairement 'jeune' et d'age inférieur à 60 ans.")
-
-
-
 if st.checkbox("--> Afficher la visualisation de la variable Age"):
     st.markdown("#### Visualisation de la variable 'Age'")
     st.markdown(" ")
