@@ -79,6 +79,19 @@ st.markdown("* La majorité des clients est contacté pour la première fois lor
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
 
 
+if st.checkbox("--> Afficher la visualisation de la variable Day_of_Weeks"):
+    st.markdown("#### Visualisation de la variable 'Day_of_Weeks'")
+    st.markdown(" ")
+    fig, ax = plt.subplots(figsize=(15,15))
+    ax.hist(df['day_of_week'], rwidth=0.9, bins=15)
+    plt.xlabel('day_of_week')
+    plt.ylabel("Fréquence")
+    plt.title("Distribution de la variable 'Day_of_Weeks'")
+    st.pyplot(fig)
+    
+    st.markdown("Nous constatons une répartition inégale des Mois, suite à un recouvrement, la campagne durant plus de un an. L'absence d'une variable date (avec l'année) rend difficile une analyse plus précise du phénomène sans retravailler les données pour reconstitution d'une série chronologique explicite.")
+    
+
 if st.checkbox("--> Afficher la visualisation de la variable Months"):
     st.markdown("#### Visualisation de la variable 'Month'")
     st.markdown(" ")
@@ -86,13 +99,11 @@ if st.checkbox("--> Afficher la visualisation de la variable Months"):
     ax.hist(df['month'], rwidth=0.9, bins=15)
     plt.xlabel('Month')
     plt.ylabel("Fréquence")
-    plt.title("Distribution de la variable 'Monyh'")
+    plt.title("Distribution de la variable 'Month'")
     st.pyplot(fig)
     
-    st.markdown("Nous constatons une répartition inégale des Mois, suite à un recouvrement, la campagne durant plus de un an. L'absence d'une variable date (avec l'année) rend difficile une analyse plus précise du phénomène sans retravailler les données pour reconstitution d'une série chronologique explicite.")
+    st.markdown("La répartition par jours de la semaine est assez homogène, cela se retrouve dans les proportions de souscriptions. Remarque, nous pouvons constater qu'il n'y a pas de démarchage le week-end. Notre reconstitution de la série chronologique se fera donc uniquement sur année-mois.")
     
-
-
 
     
 if st.checkbox("--> Afficher la visualisation de la variable Age"):
