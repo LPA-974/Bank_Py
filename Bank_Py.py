@@ -119,14 +119,8 @@ if st.checkbox("--> Afficher la visualisation du Nombre d'entretiens et de la co
     
 if st.checkbox("--> Afficher la visualisation de la variable Age"):
     st.markdown("#### Visualisation de la variable 'Age'")
-    st.markdown(" ")
-    fig, ax = plt.subplots(figsize=(15,15))
-    ax.hist(df['age'], rwidth=0.9, bins=15)
-    plt.xlabel('Ages')
-    plt.ylabel("Fréquence")
-    plt.xticks([15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95])
-    plt.title("Distribution de la variable 'Age'")
-    st.pyplot(fig)
+    st.image('./Var_Dist_Age.jpg')
+
     
     st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est                   majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
@@ -135,15 +129,8 @@ if st.checkbox("--> Afficher la visualisation de la variable Age"):
 
 if st.checkbox("--> Afficher la visualisation de la variable Duration"):
     st.markdown("#### Visualisation de la variable 'Duration'")
-    st.markdown(" ")
-    fig, ax = plt.subplots(figsize=(20,15))
+    st.image('./Var_Dist_Duration.jpg')
 
-    ax.hist(df['duration'], rwidth=0.9, bins=60)
-    plt.xlabel('Durée en minutes du dernier contact')
-    plt.ylabel("Fréquence")
-    plt.xticks([0,1,3,6,12,20,24,30,40,60])
-    plt.title("Distribution de la variable 'Duration'")
-    st.pyplot(fig)
     st.markdown("Nous pouvons constater que : ")
     st.markdown("* la majorité des appels durent entre 1 et 6 minutes")
     st.markdown("* les appels de moins de 1 minutes sont improductifs")
