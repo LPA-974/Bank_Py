@@ -232,7 +232,8 @@ if st.checkbox("--> Afficher la visualisation de la variable cible 'Y'"):
     st.markdown("#### Visualisation de la variable cible 'Y'")
     st.image('./Var_Dist_Y.jpg')
 
-    st.markdown("Le résultat de la campagne de télémarketing bancaire est plutôt bon avec 11% de souscription de dépôt à terme. Remarque, pour les étapes de modélisations à suivre nous devrons certainement retravailler la taille de l'échantillon (oversampling ?) pour ré-équilibrer les 2 modalités.")      
+    st.markdown("Le résultat de la campagne de télémarketing bancaire est plutôt bon avec 11% de souscription de dépôt à terme.")
+    st.markdown("Remarque, pour les étapes de modélisations à suivre nous devrons certainement retravailler la taille de l'échantillon (oversampling ?) pour ré-équilibrer les 2 modalités.")      
     
 
     
