@@ -153,3 +153,22 @@ if st.checkbox("--> Afficher la visualisation de la Heatmap"):
     st.markdown("Suivi par le nombre de jours depuis le dernier contact (0,28) et le nombre de contact (0,23).")
     st.markdown("Les coefficients de corrélations négatif entre la variable cible et les variables économiques s'expliquent par l'aspect       'refuge' du dépôt à terme.")
 
+if st.checkbox("--> Afficher la visualisation de la variable Campaign"):
+    st.markdown("#### Visualisation de la variable 'Campaign'")
+    st.image('./Var_Dist_Campaign.jpg')
+
+    st.markdown("Les personnes qui ont souscrits sont près de 50% à le faire au premier contact, cependant, les personnes qui ont été contactées plusieurs fois au cours de cette campagne sont encore susceptibles de souscrire même si cette tendance diminue après le troisiemme contact et devient négligeable après le cinquième contact (effet de lassitude ?).")
+
+if st.checkbox("--> Afficher la visualisation de la variable PDays"):
+    st.markdown("#### Visualisation de la variable 'Pdays'")
+    st.image('./Var_Dist_Pdays.jpg')
+
+    st.markdown("La majorité des non souscriptions (98,5%) se produisent pour des personnes qui non pas été recontactées après une campagne antérieure, c'est à dire pour des personnes primo-contactées. Par contre pour les souscriptions, elles sont réalisées à 79% par des primo-contactées, puis le reste des souscriptions par les personnes au fur et à mesure des recontacts mêmes si les volumes représentés sont très faibles.")
+
+    
+if st.checkbox("--> Afficher la visualisation de la variable Previous"):
+    st.markdown("#### Visualisation de la variable 'Previous'")
+    st.image('./Var_Dist_Previous.jpg')
+
+    st.markdown("La trés grande majorité des personnes n'ont pas été contactées avant la campagne en cours (previous = 0). Cependant, les personnes qui ont été recontactées sont susceptibles de souscrire même si cette tendance diminue après le troisiemme contact (effet de lassitude ?).")
+    
