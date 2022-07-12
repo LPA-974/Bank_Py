@@ -78,7 +78,8 @@ st.markdown("* Vu les statistiques, la variable pdays ne semble pas exploitable,
 st.markdown("* La majorité des clients est contacté pour la première fois lors de cette campagne.")
 st.markdown("* Sur la période d'observation, les indicateurs économiques sont relativement stables hormis l'Euribor et la variation du taux d'emploi.")
 
-
+st.markdown('### Visualisations graphiques')
+st.markdown("--- ")
 
 if st.checkbox("--> Afficher la visualisation de la variable Months"):
     st.markdown("#### Visualisation de la variable 'Month'")
@@ -104,7 +105,7 @@ if st.checkbox("--> Afficher la visualisation de la variable Day_of_Weeks"):
     
     st.markdown("Nous constatons une répartition inégale des Mois, suite à un recouvrement, la campagne durant plus de un an. L'absence d'une variable date (avec l'année) rend difficile une analyse plus précise du phénomène sans retravailler les données pour reconstitution d'une série chronologique explicite.")
     
-if st.checkbox("--> Afficher la visualisation du Nombre d'entretien et de la conversion au fil du temps"):
+if st.checkbox("--> Afficher la visualisation du Nombre d'entretiens et de la conversion au fil du temps"):
     st.markdown("Nombre d'entretien et du nombre de conversion au fil du temps")
     st.image('./Var_Interview.jpg')
 
@@ -129,6 +130,8 @@ if st.checkbox("--> Afficher la visualisation de la variable Age"):
     
     st.markdown("Cette visualisation de la distribution de la variable 'age' permet de constater que la population ciblée est                   majoritairement 'jeune' et d'age inférieur à 60 ans.")
 
+    st.markdown("Age moyen des clients au fil du temps")
+    st.image('./Var_Age_Mean.jpg')
 
 if st.checkbox("--> Afficher la visualisation de la variable Duration"):
     st.markdown("#### Visualisation de la variable 'Duration'")
@@ -147,6 +150,9 @@ if st.checkbox("--> Afficher la visualisation de la variable Duration"):
     st.markdown("* les appels entre 3 et 12 minutes sont souvent productifs")
     st.markdown("* les appels entre 12 et 24 minutes, sont très productifs, mais peu nombreux.")
 
+    
+    st.markdown("Durée moyenne des entretiens au fil du temps")
+    st.image('./Var_Duration.jpg')    
 
 if st.checkbox("--> Afficher la visualisation de la Heatmap"):
     st.markdown("#### Visualisation de la Heatmap")
